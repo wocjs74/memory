@@ -1,0 +1,65 @@
+package com.fxmx.simple;
+
+public class Circle {
+	double rad;
+	final double PI;
+	
+	public Circle(double r ) {
+		rad =r ;
+		PI = 3.14;
+		
+	}
+	public double getArea() {
+		return (rad*rad)*PI;
+	}
+	public double getPerimeter() {
+		return (rad*rad)*PI;
+}
+}
+
+
+
+
+
+
+package com.wxfx.smart;
+
+public class Circle {
+	//패키지 1. 이름충돌이 없다. 2. 정리 구분 3
+	double rad;
+	final double PI;
+
+
+	public Circle(double r) {
+		rad=r;
+		PI=3.14;
+		
+	}s
+	public double getArea() {
+		return (rad*rad)*PI;
+	}
+	
+}
+
+
+
+package Chapter8;
+
+import java.util.*;
+//*-all
+import com.wxfx.smart.Circle;     //com.wxfx.smart 패키지의 Circle파일을 포함시킨다.
+
+
+public class CircleApp {
+	private final String getUsersSq1="select*from tableName";
+	public static void main(String[] args) {
+		Circle circle= new Circle(4);
+		System.out.println("원의 넓이 : "+ circle.getArea());
+		com.fxmx.simple.Circle circle2 =
+				new com.fxmx.simple.Circle(4);
+		System.out.println("원의 둘레 :" +circle2.getPerimeter());
+		//ctrl+shift+o => 자동 임포트
+		Scanner scanner= new Scanner(System.in);
+	}
+}
+
